@@ -1,0 +1,8 @@
+version: "3.7"
+services:
+  operator-mono-lig:
+    build: .
+    image: d3763/operator-mono-lig
+    container_name: operator-mono-lig
+    volumes:
+      - ./output:/operator-mono-lig/build
