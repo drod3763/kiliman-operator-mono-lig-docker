@@ -14,6 +14,4 @@ RUN npm install \
     && sed -i 's/bash/sh/g' build.sh \
     && rm -rf /var/cache/apk/*
 
-COPY ./input/* /operator-mono-lig/original/
-
 ENTRYPOINT ["./build.sh"]
