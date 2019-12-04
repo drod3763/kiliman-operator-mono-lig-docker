@@ -5,4 +5,5 @@ services:
     image: d3763/operator-mono-lig
     container_name: operator-mono-lig
     volumes:
+      - ./input:/operator-mongo-lig/original
       - ./output:/operator-mono-lig/build
