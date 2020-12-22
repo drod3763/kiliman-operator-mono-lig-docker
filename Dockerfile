@@ -1,8 +1,10 @@
-FROM python:alpine
+FROM python:2-alpine3.11
 
 RUN pip install fonttools \
     && apk add --update git npm \
     && git clone https://github.com/kiliman/operator-mono-lig.git \
+    && cd operator-mono-lig \
+    && git checkout v2.2.8 \
     && apk del git
 
 WORKDIR /operator-mono-lig
